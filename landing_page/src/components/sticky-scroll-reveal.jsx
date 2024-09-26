@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 import { cn } from "../lib/utils";
@@ -53,7 +51,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
       <div className="div relative flex items-start px-4 mt-10">
         <div className="max-w-2xl">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20">
+            <div key={item.title + index} className="my-20 ">
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -78,7 +76,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
               </motion.p>
             </div>
           ))}
-          <div className="h-40" />
+          <div className="h-44" />
         </div>
       </div>
       <div

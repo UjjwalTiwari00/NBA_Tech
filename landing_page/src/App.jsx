@@ -6,6 +6,7 @@ import Hero_section from './components/Hero_section';
 import Layout from './components/Layout';
 import Navbar from './components/Navbar';
 import Our_Service from './components/Our_Services';
+import SolutionsAndServices from './components/SolutionsAndServices';
 import { StickyScrollRevealDemo } from './components/StickyScrollRevealDemo';
 
 
@@ -19,6 +20,7 @@ export default function App() {
     <StickyScrollRevealDemo className="w-screen"/> 
     {/* <CardHoverEffectDemo /> */}
     <Our_Service/>
+    <SolutionsAndServices/>
     <ContactForm/>
     <Footer/>
     </div>

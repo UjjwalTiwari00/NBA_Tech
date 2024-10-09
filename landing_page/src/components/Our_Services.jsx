@@ -100,7 +100,7 @@ export default function Our_Service() {
   }, [controls, inView]);
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 via-white to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
+    <div id="Services" className="bg-gradient-to-b from-gray-50 via-white to-gray-100 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-8xl mx-auto flex flex-col items-center">
         <motion.div
           className="text-center mb-24"

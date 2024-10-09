@@ -49,7 +49,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-4 lg:px-5">
+    <div id="contact" className="min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-4 lg:px-5">
       <div className="max-w-md w-full space-y-6">
         <div>
           <h2 className="mt-3 text-center text-3xl font-extrabold text-gray-900">

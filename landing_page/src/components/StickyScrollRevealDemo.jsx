@@ -69,9 +69,9 @@ const content = [
     title: "",
     description:
       "",
-    description:
+    description1:
       "",
-    description:
+    description2:
       "",
       content: (
         <div className="">

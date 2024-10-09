@@ -1,11 +1,8 @@
 import React from 'react'
-import { Phone, Mail, MapPin, Send } from 'lucide-react'
-// import { Input } from "@/components/ui/input"
-// import { Button } from "@/components/ui/button"
-
+import { Phone, Mail, Send } from 'lucide-react'
 export default function Footer() {
   return (
-    <footer className="bg-[#2f3567] text-white py-12">
+    <footer className="bg-[#2f3567] text-white py-12 ">
       <div className="container mx-auto px-4">
         {/* Contact Information */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

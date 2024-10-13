@@ -42,7 +42,9 @@ export default function About_section() {
                   setText(!text);
                 }}
               >
-                Learn More
+                {
+                  text?("Show Less"):("see more")
+                }
               </button>
             </div>
           </div>

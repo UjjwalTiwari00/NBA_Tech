@@ -126,7 +126,7 @@ export default function HeroSection() {
             className="w-full flex flex-col sm:flex-row gap-4"
             variants={containerVariants}
           >
-            <motion.button
+            {/* <motion.button
               className="group relative inline-flex items-center justify-start overflow-hidden rounded-full px-6 py-3 sm:px-8 font-bold bg-purple-600 text-white transition-all duration-300 ease-in-out hover:bg-purple-700"
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
@@ -146,7 +146,7 @@ export default function HeroSection() {
               <span className="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">
                 Free Consultation
               </span>
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </motion.div>
       </motion.div>

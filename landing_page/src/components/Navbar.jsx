@@ -98,11 +98,11 @@ const Navbar = () => {
               </Link>
             ))}
             <NavLink  to="/gallery"  className='cursor-pointer block py-2 px-3 rounded-md text-base font-medium hover:text-purple-600'>
-            gallery
+            Gallery
             </NavLink>
-            <NavLink  to="/career"  className='cursor-pointer block py-2 px-3 rounded-md text-base font-medium hover:text-purple-600'>
+            <NavLink  to="/career"  className='cursor-pointer block  py-2 px-3 rounded-md text-base font-medium hover:text-purple-600'>
               
-            career
+            Career
              
             </NavLink>
             <Link  to="contact" smooth={true} duration={500} className='cursor-pointer'>

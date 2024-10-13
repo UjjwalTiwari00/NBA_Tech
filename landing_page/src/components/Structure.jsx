@@ -5,6 +5,7 @@ import Our_Service from './Our_Services';
 import SolutionsAndServices from './SolutionsAndServices';
 import ContactForm from './ContactForm';
 import HeroSection from './Hero_section';
+import CountsStores from './CountsStores';
 
 const Structure = () => {
   return (
@@ -14,7 +15,10 @@ const Structure = () => {
       <StickyScrollRevealDemo className="w-screen" /> 
       {/* <CardHoverEffectDemo /> */}
       <Our_Service />
+        
+      <CountsStores/>
       <SolutionsAndServices />
+      
       <ContactForm />
     </div>
   );

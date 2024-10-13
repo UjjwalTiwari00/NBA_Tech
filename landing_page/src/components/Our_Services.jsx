@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from 'react-router-dom'
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import img2_2 from "../images/img2_2.png";
@@ -74,13 +75,13 @@ const ServiceCard = ({ service, index }) => {
       </div>
       <h3 className="text-xl font-semibold text-center text-gray-900 mb-4">{service.title}</h3>
       <div className="mt-4 flex justify-center">
-        <motion.button
+        {/* <motion.button
           className="bg-gradient-to-r from-gray-400 to-blue-500 text-white font-bold py-2 px-4 rounded-full hover:from-green-500 hover:to-blue-600 transition-all duration-300"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
         >
           Learn More →
-        </motion.button>
+        </motion.button> */}
       </div>
     </motion.div>
   );
@@ -116,13 +117,15 @@ export default function Our_Service() {
           <p className="text-xl text-gray-600 mb-8">
             that Drive Superior Outcomes
           </p>
-          <motion.button
+          <NavLink to='/qouta'>
+          <motion.button 
             className="bg-gradient-to-r from-gray-400 to-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300"
             whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(34,197,94)" }}
             whileTap={{ scale: 0.95 }}
           >
             Get a Quote »
           </motion.button>
+          </NavLink>
         </motion.div>
         <motion.div
           ref={ref}

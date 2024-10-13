@@ -6,6 +6,7 @@ import  { createBrowserRouter, Route ,RouterProvider} from 'react-router-dom'
 import Career from './components/Career.jsx'
 import {Gallery}  from './components/Gallery.jsx'
 import Structure from './components/Structure.jsx'
+import Qouta from './components/qouta.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'career',
         element: <Career />,  
+      },
+      {
+        path: 'qouta',
+        element: <Qouta />,  
       },
     ],
   },

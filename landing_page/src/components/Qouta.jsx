@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function ContactForm() {
+export default function Qouta() {
   const [formData, setFormData] = useState({
-    from_name: "",
+    name: "",
     email: "",
     phone: "",
     message: "",
+    category: "", // Renamed from service to category for consistency
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -26,17 +27,17 @@ export default function ContactForm() {
 
     emailjs
       .sendForm(
-        "service_5ecjf4o",
-        "template_e218r8q",
+        "service_5ecjf4o", // Your EmailJS service ID
+        "template_p4kv7c7", // Your EmailJS template ID
         form.current,
-        'Wwc73YCa_zpZ63Bvo',
- 
+        "Wwc73YCa_zpZ63Bvo" // Your EmailJS public key
       )
       .then(
         (result) => {
           console.log(result.text);
           setSubmitStatus("success");
-          setFormData({ name: "", email: "", phone: "", message: "" });
+          // Reset the form, including category
+          setFormData({ name: "", email: "", phone: "", message: "", category: "" });
         },
         (error) => {
           console.log(error.text);
@@ -49,11 +50,14 @@ export default function ContactForm() {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-4 lg:px-5">
-      <div className="max-w-md w-full space-y-6">
+    <div
+      id="contact"
+      className="min-h-screen bg-gray-100 flex items-center justify-center px-10 sm:px-4 lg:px-5 w-full"
+    >
+      <div className="space-y-6 bg-slate-300 p-5 mt-20 w-1/2">
         <div>
-          <h2 className="mt-3 text-center text-3xl font-extrabold text-gray-900">
-            Contact Us
+          <h2 className="mt-3 text-center font-bold text-6xl text-blue-500">
+            Get Quotation
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             We'd love to hear from you. Fill out the form below and we'll get
@@ -67,8 +71,8 @@ export default function ContactForm() {
                 Name
               </label>
               <input
-                id="from_name"
-                name="from_name"
+                id="name"
+                name="name"
                 type="text"
                 required
                 className="appearance-none rounded-none relative block w-full px-3 py-2 mb-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
@@ -109,6 +113,29 @@ export default function ContactForm() {
                 onChange={handleChange}
               />
             </div>
+
+            <div>
+              <label htmlFor="category" className="sr-only">
+                Select Category
+              </label>
+              <select
+                id="category"
+                name="category" // Updated to match formData field
+                required
+                className="appearance-none rounded-none relative block w-full mb-2 px-3 py-2 border border-gray-300 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                value={formData.category} // Bind to formData.category
+                onChange={handleChange}
+              >
+                <option value="">Select Category</option>
+                <option value="web-development">Web Development</option>
+                <option value="app-development">App Development</option>
+                <option value="mobile-development">Mobile Development</option>
+                <option value="cyber-security">Cyber Security services</option>
+                <option value="digital-marketing-services">Digital Marketing Services</option>
+                <option value="It-Consulting">IT Consulting</option>
+              </select>
+            </div>
+
             <div>
               <label htmlFor="message" className="sr-only">
                 Message
@@ -119,7 +146,7 @@ export default function ContactForm() {
                 rows="4"
                 required
                 className="appearance-none rounded-none relative block mb-2 w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Your message"
+                placeholder="Description About Services"
                 value={formData.message}
                 onChange={handleChange}
               ></textarea>
@@ -149,37 +176,3 @@ export default function ContactForm() {
     </div>
   );
 }
-
-// import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
-
-// export default function ContactForm() {
-//   const form = useRef();
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs
-//       .sendForm('service_5ecjf4o', 'template_e218r8q', form.current, 'Wwc73YCa_zpZ63Bvo')
-//       .then(
-//         () => {
-//           console.log('SUCCESS!');
-//         },
-//         (error) => {
-//           console.log('FAILED...', error.text);
-//         },
-//       );
-//   };
-
-//   return (
-//     <form ref={form} onSubmit={sendEmail}>
-//       <label>Name</label>
-//       <input type="text" name="user_name" />
-//       <label>Email</label>
-//       <input type="email" name="user_email" />
-//       <label>Message</label>
-//       <textarea name="message" />
-//       <input type="submit" value="Send" />
-//     </form>
-//   );
-// };

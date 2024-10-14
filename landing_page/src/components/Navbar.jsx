@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo_2 from "../images/logo_2.png";
+import nba_log_1 from "../images/nba_log_1.png";
 import {Link} from "react-scroll"
 import { NavLink } from "react-router-dom";
 
@@ -41,12 +41,12 @@ const Navbar = () => {
   return (
     <div
       className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        isScrolled ? "bg-white text-gray-900 shadow-md" : "bg-gray-900 text-white"
+        isScrolled ? "bg-white text-gray-700 shadow-md" : " text-white bg-gray-900"
       }`}
     >
       <header className="flex flex-wrap justify-between items-center max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-full">
-          <img src={logo_2} alt="logo" className="h-32 object-contain"/>
+        <div className="flex items-center h-full ">
+          <img src={nba_log_1} alt="logo" className="h-32 w-44"/>
         </div>
 
         <div className="flex md:hidden">

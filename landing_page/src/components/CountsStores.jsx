@@ -6,14 +6,14 @@ import { FaThumbsUp } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 
 const CountsStores = () => {
-  const[count1,setCount1]=useState(25000);
+  const[count1,setCount1]=useState(250000);
   const[count2,setCount2]=useState(350);
   const[count3,setCount3]=useState(250);
   const[count4,setCount4]=useState(50);
   
  useEffect(()=>{
  const timer= setTimeout(()=>{
-   setCount1(count1+1)
+   setCount1(count1+13)
   },2000)
  const timer1= setTimeout(()=>{
   setCount2(count2+1)
